@@ -5,8 +5,8 @@ import InlineSVG from './InlineSVG'
 
 export default () => (
   <>
-    {/*<AnchorLinkWithIcon />*/}
     <InlineImage />
     <InlineSVG />
+    <AnchorLinkWithIcon />
   </>
 )
