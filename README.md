@@ -44,3 +44,10 @@ Bulk:
 ```
 INPUT=./static/svg/original/* OUTPUT=./static/svg/ npm run svgo
 ```
+
+
+## TODO
+
+- Unit tests
+- Snapshot tests
+- Integrate with storybook so we have also visual look on all props combinations.
