@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "svgo": "svgo $INPUT -o $OUTPUT --multipass --pretty --enable=removeRasterImages,sortAttrs,removeDimensions,removeAttrs,removeOffCanvasPaths,reusePaths"
+    "svgo": "svgo $INPUT -o $OUTPUT --multipass --pretty --enable=removeRasterImages,sortAttrs,removeDimensions,removeAttrs,removeOffCanvasPaths,reusePaths",
+    "eslint": "./node_modules/.bin/eslint ./"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,21 @@
     "styled-theme": "^0.3.3"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
     "svgo": "^1.2.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
