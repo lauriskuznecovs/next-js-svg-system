@@ -9,10 +9,11 @@ export default createGlobalStyle`
   html {
     font-size: 100%;
     line-height: 1.6;
+    font-family: ${({theme}) => theme.fonts.primary};
   }
   body {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     font-size: 1em;
     line-height: 1.6;
     box-sizing: border-box;
@@ -23,12 +24,13 @@ export default createGlobalStyle`
   img {
     max-width: 100%;
   }
-   a {
-     color: ${({theme}) => theme.palette.link.active};
-     &:hover {
-       color: ${({theme}) => theme.palette.link.hover};
-     }
-   }
+  a {
+    font-size: 1.1em;
+    color: ${({theme}) => theme.palette.link.active};
+    &:hover {
+      color: ${({theme}) => theme.palette.link.hover};
+    }
+  }
   svg {
     path,
     circle,
