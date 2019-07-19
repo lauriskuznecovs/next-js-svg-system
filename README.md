@@ -1,5 +1,8 @@
 # Next.js inline SVG icon system
 
+## Introduction
+
+
 This icon system should fit all Next.js projects.
 
 ## Preview
