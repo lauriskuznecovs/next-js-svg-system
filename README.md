@@ -2,18 +2,23 @@
 
 ## Introduction
 
+### Motivation
+- Multiple svg file versions per icon (light and dark version of same icon), which results in tons of icons.
+- Import all versions (colors) of svg files into your component, which reduces code transparency.
+- Hard to make icon related components, like Link with icon, because you need to handle all those svg file versions.
+- Properly handle link and icon accessibility with aria attributes.
 
-This icon system should fit all Next.js projects.
+### Solution
+- `<Icon />` - single icon component for multiple use-cases, like:
+  - rendering SVG as `<img src="data:image/svg+xml">` tag
+  - rendering SVG as `<svg>` tag with possibility to pass any custom default/hover color via props
+  - rendering SVG as `<svg` tag with possibility to inherit default/hover color from parent element
+- `<AnchorLinkWithIcon />` - single link component for multiple use-cases, like:
+  - you can pass SVG icon and order where to place that icon (before/after link text)
+  - in case link will be some external resource, it will show external link icon automatically
 
 ## Preview
 ![](./docs/ScreenShot.png)
-
-## Reusable components
-
-There are [3 general components](./components/General) to demonstrate how flexible this svg icon component can be.
-- `<AnchorLink />`
-- `<AnchorLinkWithIcon />`
-- `<Icon />`
 
 ## Run locally
 ```
@@ -47,7 +52,6 @@ Bulk:
 ```
 INPUT=./static/svg/original/* OUTPUT=./static/svg/ npm run svgo
 ```
-
 
 ## TODO
 
