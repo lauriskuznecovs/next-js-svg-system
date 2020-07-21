@@ -15,8 +15,8 @@ import {
 /**
  * Icons
  */
-import ArrowRightIcon from '../../static/svg/original/arrow_right.svg?include'
-import DocumentIcon from '../../static/svg/original/document.svg?include'
+import ArrowRightIcon from '../../public/svg/original/arrow_right.svg?include'
+import DocumentIcon from '../../public/svg/original/document.svg?include'
 
 export default () => (
   <>

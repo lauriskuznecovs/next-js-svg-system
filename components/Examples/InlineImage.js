@@ -12,13 +12,13 @@ import {
 /**
  * Icons
  */
-import ArrowLeftIcon from '../../static/svg/original/arrow_left.svg'
-import ArrowRightIcon from '../../static/svg/original/arrow_right.svg'
-import CheckboxIcon from '../../static/svg/original/checkbox.svg'
-import DocumentIcon from '../../static/svg/original/document.svg'
-import FacebookIcon from '../../static/svg/original/facebook.svg'
-import MailIcon from '../../static/svg/original/mail.svg'
-import OpenExternalIcon from '../../static/svg/original/open_external.svg'
+import ArrowLeftIcon from '../../public/svg/original/arrow_left.svg'
+import ArrowRightIcon from '../../public/svg/original/arrow_right.svg'
+import CheckboxIcon from '../../public/svg/original/checkbox.svg'
+import DocumentIcon from '../../public/svg/original/document.svg'
+import FacebookIcon from '../../public/svg/original/facebook.svg'
+import MailIcon from '../../public/svg/original/mail.svg'
+import OpenExternalIcon from '../../public/svg/original/open_external.svg'
 
 export default () => (
   <IconWrapper>

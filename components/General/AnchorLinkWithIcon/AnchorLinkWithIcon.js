@@ -23,7 +23,7 @@ import {
 /**
  * Icons
  */
-import ExternalIcon from '../../../static/svg/open_external.svg?include'
+import ExternalIcon from '../../../public/svg/open_external.svg?include'
 
 /**
  * General Link component with icon.
