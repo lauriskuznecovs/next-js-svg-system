@@ -12,7 +12,7 @@
 - `<Icon />` - single icon component for multiple use-cases, like:
   - rendering SVG as `<img src="data:image/svg+xml">` tag
   - rendering SVG as `<svg>` tag with possibility to pass any custom default/hover color via props
-  - rendering SVG as `<svg` tag with possibility to inherit default/hover color from parent element
+  - rendering SVG as `<svg>` tag with possibility to inherit default/hover color from parent element
 - `<AnchorLinkWithIcon />` - single link component for multiple use-cases, like:
   - you can pass SVG icon and order where to place that icon (before/after link text)
   - in case link will be some external resource, it will show external link icon automatically
