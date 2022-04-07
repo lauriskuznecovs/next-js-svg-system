@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-
 import Layout from './Layout'
 import Main from './General/Main'
 
@@ -11,11 +9,9 @@ import Main from './General/Main'
  * @returns {*}
  * @constructor
  */
-const App = ({children}) => (
+const App = ({ children }) => (
   <Layout>
-    <Main>
-      {children}
-    </Main>
+    <Main>{children}</Main>
   </Layout>
 )
 

@@ -1,19 +1,16 @@
-export const createBodyMarkup = (body) => (
-  {__html: body}
-)
+export const createBodyMarkup = (body) => ({ __html: body })
 
-export const getAria = ({label}) => {
+export const getAria = ({ label }) => {
   let aria
 
   if (label !== undefined) {
     aria = {
       'aria-label': label,
     }
-  }
-  else {
+  } else {
     aria = {
       'aria-hidden': true,
-      'role': 'presentation',
+      role: 'presentation',
     }
   }
 

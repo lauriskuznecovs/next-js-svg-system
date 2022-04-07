@@ -1,24 +1,17 @@
 /**
  * @module Icon
  */
-import React from 'react'
 import PropTypes from 'prop-types'
 
 /**
  * Helpers
  */
-import {
-  createBodyMarkup,
-  getAria,
-} from './helper'
+import { createBodyMarkup, getAria } from './helper'
 
 /**
  * Styled components
  */
-import {
-  Wrapper,
-  SvgWrapper,
-} from './styled'
+import { Wrapper, SvgWrapper } from './styled'
 
 /**
  * Renders the svg icon as an image.
@@ -37,24 +30,18 @@ import {
  * Only use if text (visually hidden or visible) can't be added outside the icon component.
  * @param {object} options
  */
-const Icon = ({
-  className,
-  src,
-  label,
-  options = {},
-}) => (
-  <Wrapper
-    className={className}
-    {...getAria({label})}>
-    {options.inlineSvg
-      ? <SvgWrapper
-          className="inlineSvg"
-          aria-hidden="true"
-          dangerouslySetInnerHTML={createBodyMarkup(src)}
-          defaultOptions={options.default}
-        />
-      : <img src={src} alt={label} />
-    }
+const Icon = ({ className, src, label, options = {} }) => (
+  <Wrapper className={className} {...getAria({ label })}>
+    {options.inlineSvg ? (
+      <SvgWrapper
+        className="inlineSvg"
+        aria-hidden="true"
+        dangerouslySetInnerHTML={createBodyMarkup(src)}
+        defaultOptions={options.default}
+      />
+    ) : (
+      <img src={src} alt={label} />
+    )}
   </Wrapper>
 )
 

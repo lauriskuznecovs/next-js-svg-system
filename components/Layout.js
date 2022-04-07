@@ -1,4 +1,3 @@
-import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import theme from '../themes/theme'
@@ -10,7 +9,7 @@ import GlobalStyle from '../themes/global'
  * @param children {node}
  * @returns {*}
  */
-export default ({children}) => (
+export default ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle theme={theme} />

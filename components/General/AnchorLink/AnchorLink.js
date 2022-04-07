@@ -1,7 +1,6 @@
 /**
  * @module AnchorLink
  */
-import React from 'react'
 import ReactLink from 'next/link'
 
 /**
@@ -22,25 +21,18 @@ import { isExternal } from './helper'
  * @param {object} attributes
  * @param className {string}
  */
-const AnchorLink = ({path, target, children, attributes, className}) => (
-  isExternal(path)
-    ? (
-      <a
-        href={path}
-        className={className}
-        target={target}
-        {...attributes}>
+const AnchorLink = ({ path, target, children, attributes, className }) =>
+  isExternal(path) ? (
+    <a href={path} className={className} target={target} {...attributes}>
+      {children}
+    </a>
+  ) : (
+    <ReactLink href={path}>
+      <a className={className} {...attributes}>
         {children}
       </a>
-    )
-    : (
-      <ReactLink href={path}>
-        <a className={className} {...attributes}>
-          {children}
-        </a>
-      </ReactLink>
-    )
-)
+    </ReactLink>
+  )
 
 AnchorLink.propTypes = {}
 

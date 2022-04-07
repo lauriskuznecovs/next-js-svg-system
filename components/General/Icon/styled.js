@@ -16,31 +16,27 @@ export const Wrapper = styled.span`
 
   .inlineSvg svg {
     path,
-    circle:not([fill="none"]),
-    rect:not([fill="none"]),
+    circle:not([fill='none']),
+    rect:not([fill='none']),
     g {
-       fill: currentColor;
+      fill: currentColor;
     }
   }
 `
 
 export const SvgWrapper = styled.div`
   svg {
-    fill: ${({defaultOptions}) => defaultOptions && defaultOptions.fill
-      ? defaultOptions.fill
-      : 'none'
-    };
+    fill: ${({ defaultOptions }) =>
+      defaultOptions && defaultOptions.fill ? defaultOptions.fill : 'none'};
     use {
-      fill: ${({defaultOptions}) => defaultOptions && defaultOptions.fill
-        ? defaultOptions.fill
-        : 'none'
-      };
+      fill: ${({ defaultOptions }) =>
+        defaultOptions && defaultOptions.fill ? defaultOptions.fill : 'none'};
     }
     g {
-      stroke: ${({defaultOptions}) => defaultOptions && defaultOptions.stroke
-        ? defaultOptions.stroke
-        : 'none'
-      };
+      stroke: ${({ defaultOptions }) =>
+        defaultOptions && defaultOptions.stroke
+          ? defaultOptions.stroke
+          : 'none'};
     }
   }
 `

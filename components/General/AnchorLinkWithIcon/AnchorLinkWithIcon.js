@@ -1,28 +1,23 @@
 /**
  * @module AnchorLinkWithIcon
  */
-import React from 'react'
 import PropTypes from 'prop-types'
 import ReactLink from 'next/link'
 
 /**
  * Helpers
  */
-import {
-  IconWithText,
-  isExternal,
-} from './helper'
+import { IconWithText, isExternal } from './helper'
 
 /**
  * Styled components
  */
-import {
-  Anchor,
-} from './styled'
+import { Anchor } from './styled'
 
 /**
  * Icons
  */
+/* eslint-disable import/no-unresolved */
 import ExternalIcon from '../../../public/svg/open_external.svg?include'
 
 /**
@@ -54,40 +49,41 @@ const AnchorLinkWithIcon = ({
   className,
 }) => {
   const external = isExternal(path)
-  return (
-    external ? (
+  return external ? (
+    <Anchor
+      href={path}
+      className={className}
+      target={target}
+      options={options}
+      external={external}
+    >
+      <IconWithText
+        src={ExternalIcon}
+        options={options}
+        iconOnLeft={iconOnLeft}
+        iconOnRight={iconOnRight}
+      >
+        {children}
+      </IconWithText>
+    </Anchor>
+  ) : (
+    <ReactLink href={path}>
       <Anchor
         href={path}
         className={className}
-        target={target}
         options={options}
-        external={external}>
+        external={external}
+      >
         <IconWithText
-          src={ExternalIcon}
+          src={src}
           options={options}
           iconOnLeft={iconOnLeft}
-          iconOnRight={iconOnRight}>
+          iconOnRight={iconOnRight}
+        >
           {children}
         </IconWithText>
       </Anchor>
-    )
-    : (
-      <ReactLink href={path}>
-        <Anchor
-          href={path}
-          className={className}
-          options={options}
-          external={external}>
-          <IconWithText
-            src={src}
-            options={options}
-            iconOnLeft={iconOnLeft}
-            iconOnRight={iconOnRight}>
-            {children}
-          </IconWithText>
-        </Anchor>
-      </ReactLink>
-    )
+    </ReactLink>
   )
 }
 

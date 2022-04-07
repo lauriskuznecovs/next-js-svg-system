@@ -1,5 +1,3 @@
-import React from 'react'
-
 /**
  * General components
  */
@@ -17,8 +15,8 @@ import { IconWrapper } from './styled'
  * @returns {boolean}
  */
 export const isExternal = (path) => {
-  const rules = new RegExp('^(?:[a-z]+:)?//', 'i')
-  return rules.test(path)
+  const rules = /[a-zA-Z0-9]*:\/\/[^\s]*/g
+  return path.match(rules) != null
 }
 
 /**
@@ -40,18 +38,16 @@ export const IconWithText = ({
   options = {},
 }) => (
   <>
-    {src && iconOnLeft &&
+    {src && iconOnLeft && (
       <IconWrapper iconOnLeft>
         <Icon src={src} options={options} />
       </IconWrapper>
-    }
-    <span>
-      {children}
-    </span>
-    {src && iconOnRight &&
+    )}
+    <span>{children}</span>
+    {src && iconOnRight && (
       <IconWrapper iconOnRight>
         <Icon src={src} options={options} />
       </IconWrapper>
-    }
+    )}
   </>
 )

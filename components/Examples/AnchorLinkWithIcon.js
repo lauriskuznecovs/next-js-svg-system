@@ -1,5 +1,3 @@
-import React from 'react'
-
 /**
  * General components
  */
@@ -8,13 +6,12 @@ import AnchorLinkWithIcon from '../General/AnchorLinkWithIcon'
 /**
  * Styled components
  */
-import {
-  Title,
-} from './styled'
+import { Title } from './styled'
 
 /**
  * Icons
  */
+/* eslint-disable import/no-unresolved */
 import ArrowRightIcon from '../../public/svg/original/arrow_right.svg?include'
 import DocumentIcon from '../../public/svg/original/document.svg?include'
 
@@ -26,7 +23,8 @@ export default () => (
       icon={{
         src: DocumentIcon,
         iconOnLeft: true,
-      }}>
+      }}
+    >
       Link with icon on left
     </AnchorLinkWithIcon>
 
@@ -36,7 +34,8 @@ export default () => (
       icon={{
         src: ArrowRightIcon,
         iconOnRight: true,
-      }}>
+      }}
+    >
       Link with icon on right
     </AnchorLinkWithIcon>
 
@@ -45,7 +44,8 @@ export default () => (
       path="https://google.com"
       icon={{
         iconOnRight: true,
-      }}>
+      }}
+    >
       External link
     </AnchorLinkWithIcon>
   </>

@@ -1,6 +1,6 @@
 {
   "name": "next-js-svg-system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Reusable inline SVG icon system for Next.js",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "svgo": "svgo $INPUT -o $OUTPUT --multipass --pretty --enable=removeRasterImages,sortAttrs,removeDimensions,removeAttrs,removeOffCanvasPaths,reusePaths",
-    "eslint": "./node_modules/.bin/eslint ./"
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "repository": {
     "type": "git",
@@ -22,32 +22,35 @@
   },
   "homepage": "https://github.com/lauriskuznecovs/next-js-svg-system#readme",
   "dependencies": {
-    "imagemin-svgo": "^8.0.0",
-    "next": "^9.4.4",
-    "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1",
+    "imagemin-svgo": "^9.0.0",
+    "next": "^12.1.4",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.5",
     "styled-normalize": "^8.0.7",
     "styled-theme": "^0.3.3"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-styled-components": "^1.10.7",
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-import-resolver-webpack": "^0.12.2",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "svgo": "^1.3.2"
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "babel-plugin-styled-components": "^2.0.6",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "prettier": "^2.6.2",
+    "prop-types": "^15.8.1",
+    "svgo": "^2.8.0"
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }

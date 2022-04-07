@@ -1,4 +1,4 @@
 export const isExternal = (path) => {
-  const rules = new RegExp('^(?:[a-z]+:)?//', 'i')
-  return rules.test(path)
+  const rules = /[a-zA-Z0-9]*:\/\/[^\s]*/g
+  return path.match(rules) != null
 }

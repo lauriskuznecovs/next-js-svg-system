@@ -1,7 +1,6 @@
 /**
  * @module Main
  */
-import React from 'react'
 import PropTypes from 'prop-types'
 
 /**
@@ -15,10 +14,8 @@ import { StyledMain } from './styled'
  * @alias module:Main
  * @param children
  */
-const Main = ({children}) => (
-  <StyledMain id="MainLandmark">
-    {children}
-  </StyledMain>
+const Main = ({ children }) => (
+  <StyledMain id="MainLandmark">{children}</StyledMain>
 )
 
 Main.propTypes = {

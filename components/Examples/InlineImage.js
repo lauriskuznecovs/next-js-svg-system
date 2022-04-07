@@ -1,17 +1,12 @@
-import React from 'react'
-
 /**
  * Styled components
  */
-import {
-  Title,
-  StyledIcon,
-  IconWrapper,
-} from './styled'
+import { Title, StyledIcon, IconWrapper } from './styled'
 
 /**
  * Icons
  */
+/* eslint-disable import/no-unresolved */
 import ArrowLeftIcon from '../../public/svg/original/arrow_left.svg'
 import ArrowRightIcon from '../../public/svg/original/arrow_right.svg'
 import CheckboxIcon from '../../public/svg/original/checkbox.svg'

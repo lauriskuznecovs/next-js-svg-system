@@ -9,7 +9,7 @@ export default createGlobalStyle`
   html {
     font-size: 100%;
     line-height: 1.6;
-    font-family: ${({theme}) => theme.fonts.primary};
+    font-family: ${({ theme }) => theme.fonts.primary};
   }
   body {
     margin: 0;
@@ -26,9 +26,9 @@ export default createGlobalStyle`
   }
   a {
     font-size: 1.1em;
-    color: ${({theme}) => theme.palette.link.active};
+    color: ${({ theme }) => theme.palette.link.active};
     &:hover {
-      color: ${({theme}) => theme.palette.link.hover};
+      color: ${({ theme }) => theme.palette.link.hover};
     }
   }
   svg {
