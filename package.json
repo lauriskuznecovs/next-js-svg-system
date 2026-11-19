@@ -4,11 +4,11 @@
   "description": "Reusable inline SVG icon system for Next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "svgo": "svgo $INPUT -o $OUTPUT --multipass --pretty --enable=removeRasterImages,sortAttrs,removeDimensions,removeAttrs,removeOffCanvasPaths,reusePaths",
+    "svgo": "svgo $INPUT -o $OUTPUT --config svgo.cli.config.js",
     "lint": "./node_modules/.bin/eslint ./"
   },
   "repository": {
@@ -22,20 +22,17 @@
   },
   "homepage": "https://github.com/lauriskuznecovs/next-js-svg-system#readme",
   "dependencies": {
-    "imagemin-svgo": "^9.0.0",
-    "next": "^12.1.4",
-    "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "styled-components": "^5.3.5",
+    "next": "^16.4.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^5.3.11",
     "styled-normalize": "^8.0.7",
     "styled-theme": "^0.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/eslint-parser": "^7.17.0",
-    "babel-plugin-styled-components": "^2.0.6",
+    "@babel/core": "^7.29.13",
+    "@babel/eslint-parser": "^7.29.13",
+    "babel-plugin-styled-components": "^2.4.0",
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -48,7 +45,8 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "prettier": "^2.6.2",
     "prop-types": "^15.8.1",
-    "svgo": "^2.8.0"
+    "svgo": "^4.1.0",
+    "svgo-loader": "^5.0.0"
   },
   "standard": {
     "parser": "@babel/eslint-parser"
