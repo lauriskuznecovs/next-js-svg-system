@@ -6,13 +6,13 @@ export const Anchor = styled.a`
   position: relative;
   :hover {
     svg {
-      ${({ options }) =>
+      ${({ $options: options }) =>
         options &&
         options.hover &&
         options.hover &&
         `fill: ${options.hover.fill}`};
       g {
-        ${({ options }) =>
+        ${({ $options: options }) =>
           options &&
           options.hover &&
           options.hover &&

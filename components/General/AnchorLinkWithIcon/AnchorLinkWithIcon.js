@@ -54,8 +54,7 @@ const AnchorLinkWithIcon = ({
       href={path}
       className={className}
       target={target}
-      options={options}
-      external={external}
+      $options={options}
     >
       <IconWithText
         src={ExternalIcon}
@@ -67,23 +66,16 @@ const AnchorLinkWithIcon = ({
       </IconWithText>
     </Anchor>
   ) : (
-    <ReactLink href={path}>
-      <Anchor
-        href={path}
-        className={className}
+    <Anchor as={ReactLink} href={path} className={className} $options={options}>
+      <IconWithText
+        src={src}
         options={options}
-        external={external}
+        iconOnLeft={iconOnLeft}
+        iconOnRight={iconOnRight}
       >
-        <IconWithText
-          src={src}
-          options={options}
-          iconOnLeft={iconOnLeft}
-          iconOnRight={iconOnRight}
-        >
-          {children}
-        </IconWithText>
-      </Anchor>
-    </ReactLink>
+        {children}
+      </IconWithText>
+    </Anchor>
   )
 }
 

@@ -27,10 +27,8 @@ const AnchorLink = ({ path, target, children, attributes, className }) =>
       {children}
     </a>
   ) : (
-    <ReactLink href={path}>
-      <a className={className} {...attributes}>
-        {children}
-      </a>
+    <ReactLink href={path} className={className} {...attributes}>
+      {children}
     </ReactLink>
   )
 
